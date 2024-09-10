@@ -22,8 +22,9 @@ const Homepage = async () => {
     songsData = await getSongsData()
   }
   return (
-    <div className="bg-muted w-screen flex items-center justify-center max-sm:p-2 h-svh">
-      <div className="bg-background flex flex-col shadow-xl dark:shadow-none border dark:border-0 px-4 max-sm:w-full w-4/5 max-sm:h-full h-[95%] rounded-xl">
+    <div className="bg-grid-small-black/[0.4] dark:bg-grid-small-white/[0.4] w-screen flex items-center justify-center max-sm:p-2 h-svh">
+      <div className="absolute z-10 pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_30%,black)]"></div>
+      <div className="bg-background/80 z-20 flex flex-col shadow-xl dark:shadow-none border dark:border-0 px-4 max-sm:w-full w-4/5 max-sm:h-full h-[95%] rounded-xl">
         <Header />
         <form className="mb-3"
           action={async (formData : FormData) => {
